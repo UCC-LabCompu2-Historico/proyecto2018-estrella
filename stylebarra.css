@@ -7,13 +7,50 @@
     top:0px;
     right:0px;
 }
+
+.Barra img {
+    position: relative;
+    left: 20px;
+}
+
 .Titulo {
     font-family: 'Chewy', cursive;
     color: #fafafa;
     width: 50%;
     height: 30%;
     display: inline-block;
-    text-indent: 30px;
+    text-indent: 60px;
     position: absolute;
+}
 
+.Boton1 {
+    background-color: #8190A5;
+    border-radius: 14px 14px 14px 14px;
+    border-bottom-color: #8492a6;
+    height: 60px;
+    width: 190px;
+    display: inline-block;
+    position: relative;
+    float: right;
+    margin-top: 20px;
+    
+    font-family: "Candara";
+    color: #213C58;
+    font-size: 25px;
+}
+.Boton2 {
+    background-color: #e5e9f2;
+    border-radius: 14px 14px 14px 14px;
+    border-bottom-color: #8492a6;
+    height: 60px;
+    width: 190px;
+    display: inline-block;
+    position: relative;
+    float: right;
+    margin-top: 20px;
+
+
+    font-family: "Candara";
+    color: #213C58;
+    font-size: 25px;
 }
