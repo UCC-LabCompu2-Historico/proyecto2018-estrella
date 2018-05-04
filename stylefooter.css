@@ -1,0 +1,10 @@
+footer {
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    width: 95%;
+    height: 80px;
+    color: #fafafa;
+    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
