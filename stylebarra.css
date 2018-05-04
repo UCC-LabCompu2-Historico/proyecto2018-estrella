@@ -1,0 +1,19 @@
+.Barra {
+    background-color: #213c58;
+    border-bottom: 5px solid #8190a5;
+    height: 100px;
+    position: absolute;
+    width: 100%;
+    top:0px;
+    right:0px;
+}
+.Titulo {
+    font-family: 'Chewy', cursive;
+    color: #fafafa;
+    width: 50%;
+    height: 30%;
+    display: inline-flex;
+    text-indent: 30px;
+    margin: auto;
+    ]
+}
