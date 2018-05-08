@@ -54,3 +54,44 @@
     color: #213C58;
     font-size: 25px;
 }
+
+.Boton3 {
+    background-color: #e5e9f2;
+    border-radius: 14px 14px 14px 14px;
+    border-bottom-color: #8492a6;
+    height: 35px;
+    width: 190px;
+    display: inline-block;
+    position: relative;
+    float: right;
+    margin-top: 20px;
+
+
+    font-family: "Candara";
+    color: #213C58;
+    font-size: 25px;
+
+}
+
+.Data{
+    border-radius: 14px 14px 14px 14px;
+    background:aliceblue;
+    filter:opacity(.4);
+    width: 200px;
+    height: 500px;
+
+    position: relative;
+    left: 40px;
+    top: 150px;
+    
+
+}
+
+#Form{
+    background: #e5e9f2;
+    position: relative;
+    top: -8px;
+    right: 5px;
+}
+
+
