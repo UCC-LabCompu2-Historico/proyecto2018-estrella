@@ -24,7 +24,8 @@
 }
 
 .Boton1 {
-    background-color: #8190A5;
+    transition: 0.4s;
+    background-color:  #e5e9f2;
     border-radius: 14px 14px 14px 14px;
     border-bottom-color: #8492a6;
     height: 60px;
@@ -32,13 +33,16 @@
     display: inline-block;
     position: relative;
     float: right;
+    right:120px;
     margin-top: 20px;
     
     font-family: "Candara";
     color: #213C58;
     font-size: 25px;
+
 }
 .Boton2 {
+    transition: 0.4s;
     background-color: #e5e9f2;
     border-radius: 14px 14px 14px 14px;
     border-bottom-color: #8492a6;
@@ -48,7 +52,7 @@
     position: relative;
     float: right;
     margin-top: 20px;
-
+right:100px;
 
     font-family: "Candara";
     color: #213C58;
@@ -56,6 +60,7 @@
 }
 
 .Boton3 {
+    transition: 0.4s;
     background-color: #e5e9f2;
     border-radius: 14px 14px 14px 14px;
     border-bottom-color: #8492a6;
@@ -70,7 +75,21 @@
     font-family: "Candara";
     color: #213C58;
     font-size: 25px;
+ 
+}
+.Boton3:hover{
+    background-color:#8492a6;
+    
+}
 
+.Boton1:hover{
+    background-color: #8492a6;
+}
+
+.Boton2:hover{
+
+    background-color: #8492a6;
+   
 }
 
 .Data{
@@ -81,8 +100,8 @@
     height: 500px;
 
     position: relative;
-    left: 40px;
-    top: 150px;
+    left: 90px;
+    top: 130px;
     
 
 }
