@@ -5,6 +5,18 @@
     margin-top: 118px;
     filter:opacity(.3);
 }
-.box p {
+.texto-encima {
+    width:950px;
+    display: inline-block;
+    position:absolute;
+    top: 180px;
+    left: 210px;
+    text-align: justify;
+
+    font-family: Candara;
+    font-size: 20px;
+    color: #fafafa;
+
+
 
 }
