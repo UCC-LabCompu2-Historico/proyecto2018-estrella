@@ -2,6 +2,8 @@ body {
     background-image: url("Imagenes/milky-way-474931_960_720.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+
+    overflow-y: hidden;
     
 }
 

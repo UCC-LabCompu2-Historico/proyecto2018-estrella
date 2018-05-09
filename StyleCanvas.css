@@ -1,15 +1,15 @@
 #Canvas{
 
 
-    width: 1000px;
-    height: 500px;
+    width: 800px;
+    height: 420px;
     background:aliceblue;
     filter:opacity(.4);
     border-radius: 14px 14px 14px 14px;
 
     position: relative;
-    left:310px;
-    bottom: 370px;
+    left:400px;
+    bottom: 300px;
 
 
 

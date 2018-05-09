@@ -23,85 +23,52 @@
     position: absolute;
 }
 
-.Boton1 {
-    transition: 0.4s;
-    background-color:  #e5e9f2;
-    border-radius: 14px 14px 14px 14px;
-    border-bottom-color: #8492a6;
-    height: 60px;
-    width: 190px;
-    display: inline-block;
-    position: relative;
-    float: right;
-    right:120px;
-    margin-top: 20px;
-    
-    font-family: "Candara";
-    color: #213C58;
-    font-size: 25px;
-
-}
 .Boton2 {
-    transition: 0.4s;
-    background-color: #e5e9f2;
-    border-radius: 14px 14px 14px 14px;
-    border-bottom-color: #8492a6;
     height: 60px;
     width: 190px;
-    display: inline-block;
-    position: relative;
-    float: right;
-    margin-top: 20px;
+    margin: 20px 20px;
 right:100px;
 
-    font-family: "Candara";
-    color: #213C58;
-    font-size: 25px;
+    line-height: 60px;
 }
 
 .Boton3 {
+    height: 35px;
+    width: 190px;
+    margin-top: 10px;
+    top: 11px;
+    opacity: 1;
+ 
+}
+.Boton{
+    text-align: center;
+    text-decoration:none;
+    font-family: "Candara";
+    color: #213C58;
+    font-size: 25px;
+    display: inline-block;
+    position: relative;
+    float: right;
+
     transition: 0.4s;
     background-color: #e5e9f2;
     border-radius: 14px 14px 14px 14px;
     border-bottom-color: #8492a6;
-    height: 35px;
-    width: 190px;
-    display: inline-block;
-    position: relative;
-    float: right;
-    margin-top: 20px;
-
-
-    font-family: "Candara";
-    color: #213C58;
-    font-size: 25px;
- 
 }
-.Boton3:hover{
+.Boton:hover{
     background-color:#8492a6;
     
 }
 
-.Boton1:hover{
-    background-color: #8492a6;
-}
-
-.Boton2:hover{
-
-    background-color: #8492a6;
-   
-}
-
 .Data{
     border-radius: 14px 14px 14px 14px;
-    background:aliceblue;
-    filter:opacity(.4);
+    background: rgba(240, 248, 255,0.4);
     width: 200px;
-    height: 500px;
+    height: 420px;
 
     position: relative;
-    left: 90px;
-    top: 130px;
+    left: 130px;
+    top: 120px;
     
 
 }
