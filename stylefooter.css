@@ -2,9 +2,11 @@ footer {
     background-color: transparent;
     position: absolute;
     bottom: 0;
+
     width: 95%;
-    height: 80px;
+    height: 65px;
     color: #fafafa;
     text-align: center;
     font-family: 'Open Sans Condensed', sans-serif;
+    line-height: 10px;
 }

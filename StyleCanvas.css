@@ -2,16 +2,13 @@
 
 
     width: 800px;
-    height: 420px;
+    height: 400px;
     background:aliceblue;
     filter:opacity(.4);
     border-radius: 14px 14px 14px 14px;
 
+
     position: relative;
     left:400px;
-    bottom: 300px;
-
-
-
-
+    bottom: 230px;
 }
