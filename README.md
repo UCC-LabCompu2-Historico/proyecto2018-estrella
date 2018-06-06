@@ -8,7 +8,7 @@ Descripción:
 Proyecto para la asignatura Laboratorio de Computación II.
 
 
-Beschreibung: 
+Beschreibung: 🇩🇪
 Projekt für das Labor Computation Laboratory II.
 
 
