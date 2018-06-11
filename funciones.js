@@ -11,21 +11,29 @@ function dibujar_planetas(){
     var cenY= canvas.height/2;
 
     ctx.beginPath();
+    
     //ctx.ellipse(x, y, radiusX acho vertical, radiusY ancho horizontal, rotation, startAngle, endAngle, anticlockwise);
     ctx.ellipse(cenX, cenY, 45, 95, 90 * Math.PI/180, 0, 2 * Math.PI); //Mercury's orbit path
     ctx.stroke();
+    ctx.moveTo(400,270);
     ctx.ellipse(cenX, cenY, 70,130, 90 * Math.PI/180, 0, 2 * Math.PI); // Venus's orbit path
     ctx.stroke();
+    ctx.moveTo(400,280);
     ctx.ellipse(cenX, cenY, 80, 170, 90 * Math.PI/180, 0, 2 * Math.PI); // Earth's orbit path
     ctx.stroke();
+    ctx.moveTo(400,295);
     ctx.ellipse(cenX,cenY,95,200, 90 * Math.PI/180, 0, 2 * Math.PI ); //Mars's orbit path
     ctx.stroke();
+    ctx.moveTo(400,310);
     ctx.ellipse(cenX,cenY,110,230, 90 * Math.PI/180, 0, 2 * Math.PI ); // Jupiter's orbit path
     ctx.stroke();
+    ctx.moveTo(400,330);
     ctx.ellipse(cenX,cenY,130,260, 90 * Math.PI/180, 0, 2 * Math.PI ); //Saturn's orbit path
     ctx.stroke();
+    ctx.moveTo(400,345);
     ctx.ellipse(cenX,cenY,145,285, 90 * Math.PI/180, 0, 2 * Math.PI ); //Uranus's orbit path
     ctx.stroke();
+    ctx.moveTo(400,370);
     ctx.ellipse(cenX,cenY,170,300, 90 * Math.PI/180, 0, 2 * Math.PI );  // Pluto's orbit path - neptuno
     ctx.stroke();
     cxt.closePath();
