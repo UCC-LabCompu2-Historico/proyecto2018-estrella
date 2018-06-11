@@ -22,8 +22,7 @@ function dibujarPlanetas() {
     var PlutoX = 501; //neptuno
     var PlutoY = 429; //neptuno
 
-   // ctx.noFill();
-    
+
     ctx.stroke(255, 255, 255,200);
     ctx.ellipse(306,295,242,75); //Mercury's orbit path
     ctx.stroke(194, 0, 0);
