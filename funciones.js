@@ -9,7 +9,26 @@ function dibujar_planetas(){
     var ctx = canvas.getContext('2d');
     var cenX= canvas.width/2;
     var cenY= canvas.height/2;
+    
 
+    var MercuryX=400;
+    var MercuryY= 245;
+    var VenusX = 400;
+    var VenusY = 270;
+    var EarthX = 400;
+    var EarthY = 120;
+    var MarsX = 400;
+    var MarsY = 105;
+    var JupiterX = 400;
+    var JupiterY = 310;
+    var SaturnX = 400;
+    var SaturnY = 70;
+    var UranusX = 400;
+    var UranusY = 345;
+    var NeptunoX = 400; //neptuno
+    var NeptunoY = 370; //neptuno
+
+    
     ctx.beginPath();
     
     //ctx.ellipse(x, y, radiusX acho vertical, radiusY ancho horizontal, rotation, startAngle, endAngle, anticlockwise);
@@ -36,28 +55,63 @@ function dibujar_planetas(){
     ctx.moveTo(400,370);
     ctx.ellipse(cenX,cenY,170,300, 90 * Math.PI/180, 0, 2 * Math.PI );  // Pluto's orbit path - neptuno
     ctx.stroke();
+
+
+
+
+    //mercurio
+    ctx.moveTo(MercuryX,MercuryY)
+    ctx.arc(MercuryX, MercuryY, 5, 0, 2 * Math.PI, false);
+    ctx.stroke();
+   
+ //venus
+ ctx.moveTo(VenusX,VenusY)
+ ctx.arc(VenusX, VenusY, 5, 0, 2 * Math.PI, false);
+ ctx.stroke();
+
+  //tierra
+  ctx.moveTo(EarthX,EarthY)
+  ctx.arc(EarthX, EarthY, 5, 0, 2 * Math.PI, false);
+  ctx.stroke();
+
+ //marte
+ ctx.moveTo(MarsX,MarsY)
+ ctx.arc(MarsX, MarsY, 5, 0, 2 * Math.PI, false);
+ ctx.stroke();
+
+  //jupiter
+  ctx.moveTo(JupiterX,JupiterY)
+  ctx.arc(JupiterX, JupiterY, 5, 0, 2 * Math.PI, false);
+  ctx.stroke();
+
+   //saturno
+   ctx.moveTo(SaturnX,SaturnY)
+   ctx.arc(SaturnX, SaturnY, 5, 0, 2 * Math.PI, false);
+   ctx.stroke();
+
+ //urano
+ ctx.moveTo(UranusX,UranusY)
+ ctx.arc(UranusX, UranusY, 5, 0, 2 * Math.PI, false);
+ ctx.stroke();
+
+  //neptuno
+  ctx.moveTo(NeptunoX,NeptunoY)
+  ctx.arc( NeptunoX, NeptunoY, 5, 0, 2 * Math.PI, false);
+  ctx.stroke();
+
+
+   //roadster
+   //ctx.moveTo(MercuryX,MercuryY)
+   //ctx.arc(MercuryX, MercuryY, 5, 0, 2 * Math.PI, false);
+   //ctx.stroke();
+
+
     cxt.closePath();
 
+    
+  
+   
 
-    // Pl
-
-    cxt.noStroke();
-    var MercuryX=365;
-    var MercuryY= 327;
-    var VenusX = 416;
-    var VenusY = 256;
-    var EarthX = 202;
-    var EarthY = 358;
-    var MarsX = 217;
-    var MarsY = 188;
-    var JupiterX = 366;
-    var JupiterY = 157;
-    var SaturnX = 72;
-    var SaturnY = 208;
-    var UranusX = 318;
-    var UranusY = 462;
-    var PlutoX = 501; //neptuno
-    var PlutoY = 429; //neptuno
-
+    
 
 }
