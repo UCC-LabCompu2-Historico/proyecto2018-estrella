@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="stylefooter.css">
     <link rel="stylesheet" href="StyleCanvas.css">
  <script src="funciones.js" type="text/javascript"></script>
+ <script src="desplazamiento.js" type="text/javascript"></script>
 
 </head>
 
@@ -59,9 +60,9 @@
 <script src="solarsystem.js" type="text/javascript"></script>
 
 <div>
-    <form>
+    <form name="formulario" onsubmit="return validar()">
         <label for="fecha"></label>
-        <input type="text" id="fecha" name="fechayear" placeholder="Ubicar en el año">
+        <input type="text" id="fecha" name="fechayear" maxlength="4" placeholder="Ubicar en el año">
         <input type="submit" value="OK">
     </form>
 </div>
