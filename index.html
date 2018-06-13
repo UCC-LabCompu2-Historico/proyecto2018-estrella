@@ -42,15 +42,15 @@
 <div class="Data">
     <div id="Form">
 
-    <button type="button" class="Boton3 Boton">MERCURIO</button>
-    <button type="button" class="Boton3 Boton">VENUS</button>
-    <button type="button" class="Boton3 Boton">TIERRA</button>
-    <button type="button" class="Boton3 Boton">MARTE</button>
-    <button type="button" class="Boton3 Boton">JUPITER</button>
-    <button type="button" class="Boton3 Boton">SATURNO</button>
-    <button type="button" class="Boton3 Boton">URANO</button>
-    <button type="button" class="Boton3 Boton">NEPTUNO</button>
-    <button type="button" class="Boton3 Boton">ROADSTER</button>
+    <button type="button" class="Boton3 Boton" onclick="desaparecerplanetas(1)">MERCURIO</button>
+    <button type="button" class="Boton3 Boton" onclick="desaparecerplanetas(2)">VENUS</button>
+    <button type="button" class="Boton3 Boton" onclick="desaparecerplanetas(3)" >TIERRA</button>
+    <button type="button" class="Boton3 Boton" onclick="desaparecerplanetas(4)">MARTE</button>
+    <button type="button" class="Boton3 Boton" onclick="desaparecerplanetas(5)">JUPITER</button>
+    <button type="button" class="Boton3 Boton" onclick="desaparecerplanetas(6)">SATURNO</button>
+    <button type="button" class="Boton3 Boton" onclick="desaparecerplanetas(7)">URANO</button>
+    <button type="button" class="Boton3 Boton" onclick="desaparecerplanetas(8)">NEPTUNO</button>
+    <button type="button" class="Boton3 Boton" onclick="desaparecerplanetas(9)">ROADSTER</button>
 
     </div>
 </div>
@@ -60,7 +60,7 @@
 <script src="solarsystem.js" type="text/javascript"></script>
 
 <div>
-    <form name="formulario" onsubmit=" validar(); dibujar_planetas()">
+    <form name="formulario" onsubmit="event.preventDefault(); validar();moverplanetas();">
         <label for="fecha"></label>
         <input type="text" id="fecha" name="fechayear" maxlength="4" placeholder="Ubicar en el año">
         <input type="submit" value="OK">
