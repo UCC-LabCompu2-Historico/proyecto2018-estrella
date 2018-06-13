@@ -1,3 +1,5 @@
+
+
 var planetas = [
     {
         nombre:"mercurio",
@@ -56,7 +58,7 @@ var planetas = [
         tamanio: 5,
         color: "#f00"
     }
-];
+    ];
 
 /**
  * Dibuja los planetas
@@ -83,7 +85,7 @@ function dibujar_planetas(){
         //planetas
         ctx.beginPath();
         ctx.fillStyle =i.color;
-        ctx.moveTo(i.x,i.y)
+        ctx.moveTo(i.x,i.y);
         ctx.arc(i.x, i.y, i.tamanio, 0, 2 * Math.PI, false);
         ctx.stroke();
         ctx.fill();
@@ -94,10 +96,30 @@ function dibujar_planetas(){
 
 
 
+function validar() {
+    var x = document.forms["formulario"]["fechayear"].value; //como hacerla global
+    if (x == "" || x<0 || x.length<4 ) {
+        alert("Debe ingresar anio valido");
+        return false;
+    }
+}
 
+
+function moverplanetas() { //despues de dinujarlos vuelven a cero
+
+var a=10;
+    for(var i of planetas){
+        i.x= 400 + i.orbita* Math.cos(a);
+        i.y= 200 + i.orbita* Math.sin(a);
+    }
+}
+
+
+function desaparecerplanetas() {
     
-  
-   
+}
+
+
 
     
 
