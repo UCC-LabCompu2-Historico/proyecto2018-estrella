@@ -107,6 +107,14 @@ function dibujar_planetas(){
     var cenX= canvas.width/2;
     var cenY= canvas.height/2;
 
+    ctx.beginPath();
+    ctx.arc(cenX, cenY, 28, 0, 2 * Math.PI, false);
+    ctx.fillStyle = "#FFFF00";
+    ctx.strokeStyle = "#FFFF00";
+    ctx.fill();
+    ctx.stroke();
+    ctx.closePath();
+
     // for(var i=0; i< radios.length; i++)
     for(var i of planetas){
         //orbitas
@@ -114,6 +122,7 @@ function dibujar_planetas(){
         ctx.beginPath();
         ctx.moveTo(cenX+i.orbita,200);
         ctx.arc(cenX, cenY, i.orbita, 0, 2 * Math.PI, false);
+        ctx.strokeStyle = "black";
         ctx.stroke();
         ctx.closePath();
 
