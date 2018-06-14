@@ -4,11 +4,11 @@ var planetas = [
         nombre:"mercurio",
         x:400,
         y:245,
-        orbita: 45,
-        tamanio: 6,
+        orbita: 45,             // Radio de la orbita
+        tamanio: 6,             // Radio del planeta
         color: "#610B0B",
         mostrar: true,
-        velocidad: 0.1,
+        velocidad: 0.0172,
         pos_rad:0
     },{
         nombre:"venus",
@@ -18,7 +18,7 @@ var planetas = [
         tamanio: 12,
         color: "#FF8000",
         mostrar: true,
-        velocidad: 0.015,
+        velocidad: 0.0126,
         pos_rad:0
     },{
         nombre:"tierra",
@@ -28,17 +28,17 @@ var planetas = [
         tamanio: 12,
         color: "#01DF3A",
         mostrar: true,
-        velocidad: 0.026,
+        velocidad: 0.0107,
         pos_rad:0
     },{
-        nombre:"roadster",
+        nombre:"roadster",          // Corresponde al boton 9 pero por cuestiones de dibujo tiene que estar en esta posicion al definirlo
         x:389,
         y: 105,
         orbita: 93,
         tamanio: 12,
         color: "#f00",
         mostrar: true,
-        velocidad: 0.026,
+        velocidad: 0.008,    // No respeta la velocidad a escala como los demas para que pueda alinearse con la tierra y marte
         pos_rad:0
     },
         {
@@ -49,7 +49,7 @@ var planetas = [
         tamanio: 8,
         color: "#FAAC58",
         mostrar: true,
-        velocidad: 0.017,
+        velocidad: 0.0086,
         pos_rad:0
     },{
         nombre:"jupiter",
@@ -59,7 +59,7 @@ var planetas = [
         tamanio: 12,
         color: "#8A0808",
         mostrar: true,
-        velocidad: 0.013,
+        velocidad: 0.0047,
         pos_rad:0
     },{
         nombre:"saturno",
@@ -69,7 +69,7 @@ var planetas = [
         tamanio: 10,
         color: "#DBA901",
         mostrar: true,
-        velocidad: 0.1,
+        velocidad: 0.0034,
         pos_rad:0
     },{
         nombre:"urano",
@@ -79,7 +79,7 @@ var planetas = [
         tamanio: 16,
         color: "#2EFEF7",
         mostrar: true,
-        velocidad: 0.021,
+        velocidad: 0.0024,
         pos_rad:0
     },{
         nombre:"neptuno",
@@ -89,7 +89,7 @@ var planetas = [
         tamanio: 15,
         color: "#0080FF",
         mostrar: true,
-        velocidad: 0.009,
+        velocidad: 0.0019,
         pos_rad:0
     }
     ];
@@ -110,19 +110,19 @@ function dibujar_planetas(){
     ctx.beginPath();
     ctx.arc(cenX, cenY, 28, 0, 2 * Math.PI, false);
     ctx.fillStyle = "#FFFF00";
-    ctx.strokeStyle = "#FFFF00";
+    ctx.strokeStyle = "#FFFF00";            // Para sacar el contorno (no me deja usar un noStroke)
     ctx.fill();
     ctx.stroke();
     ctx.closePath();
 
     // for(var i=0; i< radios.length; i++)
-    for(var i of planetas){
+    for(var i of planetas){             // Planetas y orbitas comparten caracteristicas (arriba se especifica lo particular)
         //orbitas
 
         ctx.beginPath();
         ctx.moveTo(cenX+i.orbita,200);
         ctx.arc(cenX, cenY, i.orbita, 0, 2 * Math.PI, false);
-        ctx.strokeStyle = "black";
+        ctx.strokeStyle = "black";          // Aclarar para que no tome el style amarillo del sol
         ctx.stroke();
         ctx.closePath();
 
@@ -142,7 +142,7 @@ function dibujar_planetas(){
 
 
 
-function validar() {
+function validar() {            // Validar el año ingresado - alert
     var x = document.forms["formulario"]["fechayear"].value; 
 
     if (x == "" || x<0 || x.length<4 ) {
@@ -165,7 +165,7 @@ var interval;
 
 var a=0;
 
-function moverplanetas() { //despues de dinujarlos vuelven a cero
+function moverplanetas() {              //Despues de dibujarlos vuelven a cero
     clearInterval(interval);
     var x = document.forms["formulario"]["fechayear"].value/2000;
 
@@ -180,7 +180,7 @@ function moverplanetas() { //despues de dinujarlos vuelven a cero
 
 }
 
-function animacion(){
+function animacion(){           // Movimiento de traslacion
 
     for(var i of planetas){
         i.pos_rad += i.velocidad;
