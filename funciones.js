@@ -134,15 +134,22 @@ function dibujar_planetas(){
 
 
 function validar() {
-    var x = document.forms["formulario"]["fechayear"].value; //como hacerla global
+    var x = document.forms["formulario"]["fechayear"].value; 
+
     if (x == "" || x<0 || x.length<4 ) {
         alert("Debe ingresar año valido");
         for(var i of planetas){
-            i.pos_rad= x;  //como haces para que el anio que te ingresan modifique la posicion radial de cada planeta?? metes otro numero, apretas ok y no cambia la pos radial
+            i.mostrar=false;
         }
-        return false;
-
+    } else{
+    for(var i of planetas){
+        i.mostrar=true;
     }
+    }
+        return false;
+    
+   
+
 }
 
 var interval;
