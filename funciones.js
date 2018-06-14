@@ -5,78 +5,89 @@ var planetas = [
         x:400,
         y:245,
         orbita: 45,
-        tamanio: 5,
-        color: "#f00",
+        tamanio: 6,
+        color: "#610B0B",
         mostrar: true,
         velocidad: 0.1,
         pos_rad:0
     },{
         nombre:"venus",
-        x:400,
-        y:270,
-        orbita: 70,
-        tamanio: 5,
-        color: "#f00",
+        x:461,
+        y:200,
+        orbita: 60,
+        tamanio: 12,
+        color: "#FF8000",
         mostrar: true,
         velocidad: 0.015,
         pos_rad:0
     },{
         nombre:"tierra",
-        x:400,
-        y: 120,
+        x:362,
+        y: 268,
         orbita: 80,
-        tamanio: 5,
-        color: "#f00",
+        tamanio: 12,
+        color: "#01DF3A",
         mostrar: true,
         velocidad: 0.026,
         pos_rad:0
     },{
-        nombre:"marte",
-        x:400,
+        nombre:"roadster",
+        x:389,
         y: 105,
-        orbita: 95,
-        tamanio: 5,
+        orbita: 93,
+        tamanio: 12,
         color: "#f00",
+        mostrar: true,
+        velocidad: 0.026,
+        pos_rad:0
+    },
+        {
+        nombre:"marte",
+        x:313,
+        y: 136,
+        orbita: 110,
+        tamanio: 8,
+        color: "#FAAC58",
         mostrar: true,
         velocidad: 0.017,
         pos_rad:0
     },{
         nombre:"jupiter",
-        x:400,
-        y: 310,
-        orbita: 110,
-        tamanio: 5,
-        color: "#f00",
+        x:282,
+        y: 240,
+        orbita: 125,
+        tamanio: 12,
+        color: "#8A0808",
         mostrar: true,
         velocidad: 0.013,
         pos_rad:0
     },{
         nombre:"saturno",
-        x:400,
-        y:70,
-        orbita: 130,
-        tamanio: 5,
-        color: "#f00",
+        x:487,
+        y:90,
+        orbita: 140,
+        tamanio: 10,
+        color: "#DBA901",
         mostrar: true,
         velocidad: 0.1,
         pos_rad:0
     },{
         nombre:"urano",
         x:400,
-        y: 345,
-        orbita: 145,
-        tamanio: 5,
-        color: "#f00",
+        y: 359,
+        orbita: 160,
+        tamanio: 16,
+        color: "#2EFEF7",
         mostrar: true,
         velocidad: 0.021,
         pos_rad:0
     },{
         nombre:"neptuno",
-        x:400,
-        y: 370,
-        orbita: 170,
-        tamanio: 5,
-        color: "#f00",
+        x:518,
+        y: 339,
+        orbita: 180,
+        tamanio: 15,
+        color: "#0080FF",
         mostrar: true,
         velocidad: 0.009,
         pos_rad:0
@@ -125,7 +136,7 @@ function dibujar_planetas(){
 function validar() {
     var x = document.forms["formulario"]["fechayear"].value; //como hacerla global
     if (x == "" || x<0 || x.length<4 ) {
-        alert("Debe ingresar anio valido");
+        alert("Debe ingresar año valido");
         for(var i of planetas){
             i.pos_rad= x;  //como haces para que el anio que te ingresan modifique la posicion radial de cada planeta?? metes otro numero, apretas ok y no cambia la pos radial
         }
