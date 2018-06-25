@@ -1,4 +1,3 @@
-
 var planetas = [
     {
         nombre:"mercurio",
@@ -9,7 +8,7 @@ var planetas = [
         color: "#610B0B",
         mostrar: true,
         velocidad: 0.0172,
-        pos_rad:0
+        pos_rad:23
     },{
         nombre:"venus",
         x:461,
@@ -19,7 +18,7 @@ var planetas = [
         color: "#FF8000",
         mostrar: true,
         velocidad: 0.0126,
-        pos_rad:0
+        pos_rad:10
     },{
         nombre:"tierra",
         x:362,
@@ -50,7 +49,7 @@ var planetas = [
         color: "#FAAC58",
         mostrar: true,
         velocidad: 0.0086,
-        pos_rad:0
+        pos_rad:36
     },{
         nombre:"jupiter",
         x:282,
@@ -60,7 +59,7 @@ var planetas = [
         color: "#8A0808",
         mostrar: true,
         velocidad: 0.0047,
-        pos_rad:0
+        pos_rad:50
     },{
         nombre:"saturno",
         x:487,
@@ -70,7 +69,7 @@ var planetas = [
         color: "#DBA901",
         mostrar: true,
         velocidad: 0.0034,
-        pos_rad:0
+        pos_rad:43
     },{
         nombre:"urano",
         x:400,
@@ -80,7 +79,7 @@ var planetas = [
         color: "#2EFEF7",
         mostrar: true,
         velocidad: 0.0024,
-        pos_rad:0
+        pos_rad:4
     },{
         nombre:"neptuno",
         x:518,
@@ -90,7 +89,7 @@ var planetas = [
         color: "#0080FF",
         mostrar: true,
         velocidad: 0.0019,
-        pos_rad:0
+        pos_rad:16
     }
     ];
 
@@ -145,7 +144,7 @@ function dibujar_planetas(){
 function validar() {            // Validar el año ingresado - alert
     var x = document.forms["formulario"]["fechayear"].value; 
 
-    if (x == "" || x<0 || x.length<4 ) {
+    if (x == "" || x<0 || x.length<4 || isNaN(x)==1) {
         alert("Debe ingresar año valido");
         for(var i of planetas){
             i.mostrar=false;
@@ -155,9 +154,7 @@ function validar() {            // Validar el año ingresado - alert
         i.mostrar=true;
     }
     }
-        return false;
-    
-   
+        return false;  
 
 }
 
@@ -171,7 +168,7 @@ function moverplanetas() {              //Despues de dibujarlos vuelven a cero
 
 
     for(var i of planetas){
-        i.pos_rad = x;
+        i.pos_rad += x;
         i.x= 400 + i.orbita* Math.cos(i.pos_rad);
         i.y= 200 + i.orbita* Math.sin(i.pos_rad);
     }
