@@ -27,7 +27,7 @@
     height: 60px;
     width: 190px;
     margin: 20px 20px;
-right:100px;
+    right:100px;
 
     line-height: 60px;
 }
@@ -58,7 +58,7 @@ right:100px;
 }
 .Boton:hover{
     background-color:#8492a6;
-    
+
 }
 
 .Data{

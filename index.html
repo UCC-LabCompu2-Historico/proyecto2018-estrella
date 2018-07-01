@@ -15,59 +15,58 @@
 
 <body onload="dibujar_planetas()">
 
+    <header class="Barra">
 
-<header class="Barra">
+        <img src="Imagenes/astronautaBarra.png" width="80" height="100" />
 
-    <img src="Imagenes/astronautaBarra.png" width="80" height="100" />
-
-    <h1 class="Titulo">FIND THE STARMAN</h1>
-
-
-    <a class="Boton2 Boton" href="Info.html">INFORMACION</a>
-    <a class="Boton2 Boton">UBICAR</a>
-
-</header>
-
-<div class="Data">
-    <div id="Form">
-
-    <button type="button" class="Boton3 Boton" onclick="desaparecerplanetas(1)">MERCURIO</button>
-    <button type="button" class="Boton3 Boton" onclick="desaparecerplanetas(2)">VENUS</button>
-    <button type="button" class="Boton3 Boton" onclick="desaparecerplanetas(3)" >TIERRA</button>
-    <button type="button" class="Boton3 Boton" onclick="desaparecerplanetas(5)">MARTE</button>
-    <button type="button" class="Boton3 Boton" onclick="desaparecerplanetas(6)">JUPITER</button>
-    <button type="button" class="Boton3 Boton" onclick="desaparecerplanetas(7)">SATURNO</button>
-    <button type="button" class="Boton3 Boton" onclick="desaparecerplanetas(8)">URANO</button>
-    <button type="button" class="Boton3 Boton" onclick="desaparecerplanetas(9)">NEPTUNO</button>
-    <button type="button" class="Boton3 Boton" onclick="desaparecerplanetas(4)">ROADSTER</button>
-
-    </div>
-</div>
+        <h1 class="Titulo">FIND THE STARMAN</h1>
 
 
-<canvas id="Canvas" width="800" height="400" ></canvas>
-<script src="solarsystem.js" type="text/javascript"></script>
+        <a class="Boton2 Boton" href="Info.html">INFORMACION</a>
+        <a class="Boton2 Boton">UBICAR</a>
 
-<div>
-    <form name="formulario" onsubmit="event.preventDefault(); validar();moverplanetas();">
-        <label for="fecha"></label>
-        <input type="text" id="fecha" name="fechayear" maxlength="4" placeholder="Ubicar en el año">
-        <input type="submit" value="OK">
-    </form>
-</div>
+    </header>
 
+    <div class="Data">
+        <div id="Form">
 
+        <button type="button" class="Boton3 Boton" onclick="desaparecerplanetas(1)">MERCURIO</button>
+        <button type="button" class="Boton3 Boton" onclick="desaparecerplanetas(2)">VENUS</button>
+        <button type="button" class="Boton3 Boton" onclick="desaparecerplanetas(3)" >TIERRA</button>
+        <button type="button" class="Boton3 Boton" onclick="desaparecerplanetas(5)">MARTE</button>
+        <button type="button" class="Boton3 Boton" onclick="desaparecerplanetas(6)">JUPITER</button>
+        <button type="button" class="Boton3 Boton" onclick="desaparecerplanetas(7)">SATURNO</button>
+        <button type="button" class="Boton3 Boton" onclick="desaparecerplanetas(8)">URANO</button>
+        <button type="button" class="Boton3 Boton" onclick="desaparecerplanetas(9)">NEPTUNO</button>
+        <button type="button" class="Boton3 Boton" onclick="desaparecerplanetas(4)">ROADSTER</button>
 
-<footer>
-    <div class="define">
-        <p>Autores: Misa Carolina & Insaurralde Matias</p>
-        <p>Contacto: <a href="mailto:1702835@ucc.edu.ar">
-            Envianos un Mail</a>.</p>
+        </div>
     </div>
 
-</footer>
+
+    <canvas id="Canvas" width="800" height="400" ></canvas>
+    <script src="solarsystem.js" type="text/javascript"></script>
 
 
+    <div>
+        <form name="formulario" onsubmit="event.preventDefault(); validar();moverplanetas();">
+            <label for="fecha"></label>
+            <input type="text" id="fecha" name="fechayear" maxlength="4" placeholder="Ubicar en el año">
+            <input type="submit" value="OK">
+        </form>
+    </div>
+
+
+
+    <footer>
+        <div class="define">
+            <p>Autores: Misa Carolina & Insaurralde Matias</p>
+            <p>Contacto: <a href="mailto:1702835@ucc.edu.ar">
+                Envianos un Mail</a>.</p>
+        </div>
+
+    </footer>
 
 </body>
+
 </html>

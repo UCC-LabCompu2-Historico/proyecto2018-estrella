@@ -1,3 +1,10 @@
+/**
+ * Dibuja los planetas
+ * @method dibujar_planetas
+ * @param Parámetro A
+ * @return Valor que retorna
+ */
+
 var planetas = [
     {
         nombre:"mercurio",
@@ -30,17 +37,17 @@ var planetas = [
         velocidad: 0.0107,
         pos_rad:0
     },{
-        nombre:"roadster",          // Corresponde al boton 9 pero por cuestiones de dibujo tiene que estar en esta posicion al definirlo
+        nombre:"roadster",          // Corresponde al boton 9
         x:389,
         y: 105,
         orbita: 93,
         tamanio: 12,
         color: "#f00",
         mostrar: true,
-        velocidad: 0.008,    // No respeta la velocidad a escala como los demas para que pueda alinearse con la tierra y marte
+        velocidad: 0.0090,
         pos_rad:0
     },
-        {
+    {
         nombre:"marte",
         x:313,
         y: 136,
@@ -91,14 +98,10 @@ var planetas = [
         velocidad: 0.0019,
         pos_rad:16
     }
-    ];
+];
 
-/**
- * Dibuja los planetas
- * @method dibujar_planetas
- * @param Parámetro A
- * @return Valor que retorna
- */
+
+
 function dibujar_planetas(){
     var canvas = document.getElementById('Canvas');
     var ctx = canvas.getContext('2d');
@@ -109,19 +112,21 @@ function dibujar_planetas(){
     ctx.beginPath();
     ctx.arc(cenX, cenY, 28, 0, 2 * Math.PI, false);
     ctx.fillStyle = "#FFFF00";
-    ctx.strokeStyle = "#FFFF00";            // Para sacar el contorno (no me deja usar un noStroke)
+    ctx.strokeStyle = "#FFFF00";
     ctx.fill();
     ctx.stroke();
     ctx.closePath();
 
+
+    // Planetas y orbitas comparten caracteristicas (arriba se especifica lo particular)
     // for(var i=0; i< radios.length; i++)
-    for(var i of planetas){             // Planetas y orbitas comparten caracteristicas (arriba se especifica lo particular)
+    for(var i of planetas){
         //orbitas
 
         ctx.beginPath();
         ctx.moveTo(cenX+i.orbita,200);
         ctx.arc(cenX, cenY, i.orbita, 0, 2 * Math.PI, false);
-        ctx.strokeStyle = "black";          // Aclarar para que no tome el style amarillo del sol
+        ctx.strokeStyle = "black";
         ctx.stroke();
         ctx.closePath();
 
@@ -136,13 +141,13 @@ function dibujar_planetas(){
             ctx.closePath();
         }
     }
-    }
+}
 
 
 
-
-function validar() {            // Validar el año ingresado - alert
-    var x = document.forms["formulario"]["fechayear"].value; 
+// Validar el año ingresado - alert
+function validar() {
+    var x = document.forms["formulario"]["fechayear"].value;
 
     if (x == "" || x<0 || x.length<4 || isNaN(x)==1) {
         alert("Debe ingresar año valido");
@@ -150,19 +155,22 @@ function validar() {            // Validar el año ingresado - alert
             i.mostrar=false;
         }
     } else{
-    for(var i of planetas){
-        i.mostrar=true;
+        for(var i of planetas){
+            i.mostrar=true;
+        }
     }
-    }
-        return false;  
+    return false;
 
 }
+
+
 
 var interval;
 
 var a=0;
 
-function moverplanetas() {              //Despues de dibujarlos vuelven a cero
+//Despues de dibujarlos vuelven a cero
+function moverplanetas() {
     clearInterval(interval);
     var x = document.forms["formulario"]["fechayear"].value/2000;
 
@@ -177,7 +185,10 @@ function moverplanetas() {              //Despues de dibujarlos vuelven a cero
 
 }
 
-function animacion(){           // Movimiento de traslacion
+
+
+// Movimiento de traslacion
+function animacion(){
 
     for(var i of planetas){
         i.pos_rad += i.velocidad;
@@ -194,9 +205,6 @@ function desaparecerplanetas(numero) {
 
     planetas[numero-1].mostrar = !planetas[numero-1].mostrar;
 
-        moverplanetas();
+    moverplanetas();
 
 }
-
-    
-
